@@ -1,0 +1,17 @@
+body{
+background-image: url("background.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+}
+
+p.center{
+background-image: url("usek.jpeg");
+background-repeat: no-repeat;
+width: 191px;
+height: 191px;
+margin-left: auto;
+margin-right: auto;
+border: 2px solid darkblue;
+}
