@@ -6,12 +6,11 @@ background-position: center;
 background-attachment: fixed;
 }
 
-p.center{
-background-image: url("usek.jpeg");
+#image{
 background-repeat: no-repeat;
 width: 191px;
 height: 191px;
-margin-left: auto;
-margin-right: auto;
+margin-left: 640px;
+margin-right: 210px;
 border: 2px solid darkblue;
 }
