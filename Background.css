@@ -7,10 +7,11 @@ background-attachment: fixed;
 }
 
 #image{
-background-repeat: no-repeat;
 width: 191px;
 height: 191px;
-margin-left: 640px;
-margin-right: 210px;
 border: 2px solid darkblue;
+}
+
+.center{
+text-align:center;
 }
