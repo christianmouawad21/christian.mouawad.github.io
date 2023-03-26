@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title> My Quiz Page. </title>
+
+<link rel="stylesheet" href="QuizBackground.css">
+
+</head>
+
+<body>
+
+<div class="box" style="width:350px; height:550px; border-radius:5px; padding-left:0px; padding-right:0px;">
+<img class="image" src="usek2.png" alt="Logo">
+<h1> Login </h1>
+<form name="form1" method="post">
+<div class="field">
+<label> First Name </label> 
+<input type="text" id="userFirst" required> </div>
+<div class="field">
+<label> Last Name </label> 
+<input type="text" id="userLast" required> </div>
+<div class="field">
+<label> USEK ID </label> 
+<input type="text" id="ID" required> </div>
+<input type="button" id="btn" value="Login" onclick="myFunc()"> </div>
+</form>
+</div>
+
+<div class="box" style="width:100px; height:50px; display:none;">
+<button id="startButton" onclick="nextQuestion()">Start Quiz</button>
+</div>
+
+<div class="box" style="display:none;"> 
+<div class="questions"> <h2> Q1. Number of primitive data types in Java are? </h2> </div>
+<div class="options">
+<input type="radio" name="1" id="Quest1"> <label> A. 6 </label> </div>
+<div class="options">
+<input type="radio" name="1" id="Quest2"> <label> B. 7 </label> </div>
+<div class="options">
+<input type="radio" name="1" id="answer1"> <label> C. 8 </label> </div>
+<div class="options">
+<input type="radio" name="1" id="Quest3"> <label> D. 9 </label> </div>
+<footer>
+<div class="qNumber"> 1 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> Q2. What is the size of float and double in java? </h2> </div>
+<div class="options">
+<input type="radio" name="2" id="answer2"> <label> A. 32 and 64 </label> </div>
+<div class="options">
+<input type="radio" name="2" id="Quest4"> <label> B. 32 and 32 </label> </div>
+<div class="options">
+<input type="radio" name="2" id="Quest5"> <label> C. 64 and 64 </label> </div>
+<div class="options">
+<input type="radio" name="2" id="Quest6"> <label> D. 64 and 32  </label> </div>
+<footer>
+<div class="qNumber"> 2 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> Q3. Automatic type conversion is possible in which of the possible cases? </h2> </div>
+<div class="options">
+<input type="radio" name="3" id="Quest7"> <label> A. Byte to int </label> </div>
+<div class="options">
+<input type="radio" name="3" id="answer3"> <label> B. Int to long </label> </div>
+<div class="options">
+<input type="radio" name="3" id="Quest8"> <label> C. Long to int </label> </div>
+<div class="options">
+<input type="radio" name="3" id="Quest9"> <label> D. Short to int </label> </div>
+<footer>
+<div class="qNumber"> 3 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> &emsp; Q4. Select the valid statement. </h2> </div>
+<div class="options">
+<input type="radio" name="4" id="Quest10"> <label> A. char[] ch = new char(5); </label> </div>
+<div class="options">
+<input type="radio" name="4" id="answer4"> <label> B. char[] ch = new char[5]; </label> </div>
+<div class="options">
+<input type="radio" name="4" id="Quest11"> <label> C. char[] ch = new char(); </label> </div>
+<div class="options">
+<input type="radio" name="4 "id="Quest12"> <label> D. char[] ch = new char[]; </label> </div>
+<footer>
+<div class="qNumber"> 4 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> Q5. When an array is passed to a method, what does the method receive? </h2> </div>
+<div class="options">
+<input type="radio" name="5" id="answer5"> <label> A. The reference of the array </label> </div>
+<div class="options">
+<input type="radio" name="5" id="Quest13"> <label> B. A copy of the array </label> </div>
+<div class="options">
+<input type="radio" name="5" id="Quest14"> <label> C. Length of the array </label> </div>
+<div class="options">
+<input type="radio" name="5" id="Quest15"> <label> D. Copy of the first element </label> </div>
+<footer>
+<div class="qNumber"> 5 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> Q6. Identify the keyword among the following that makes a variable belong to a class. </h2> </div>
+<div class="options">
+<input type="radio" name="6" id="Quest16"> <label> A. final </label> </div>
+<div class="options">
+<input type="radio" name="6" id="answer6"> <label> B. static </label> </div>
+<div class="options">
+<input type="radio" name="6" id="Quest17"> <label> C. volatile </label> </div>
+<div class="options">
+<input type="radio" name="6" id="Quest18"> <label> D. abstract </label> </div>
+<footer>
+<div class="qNumber"> 6 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> Q7. Identify the return type of a method that does not return any value. </h2> </div>
+<div class="options">
+<input type="radio" name="7" id="Quest19"> <label> A. int </label> </div>
+<div class="options">
+<input type="radio" name="7" id="Quest20"> <label> B. double </label> </div>
+<div class="options">
+<input type="radio" name="7" id="answer7"> <label> C. void </label> </div>
+<div class="options">
+<input type="radio" name="7" id="Quest21"> <label> D. None </label> </div>
+<footer>
+<div class="qNumber"> 7 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> Q8. Identify the modifier which cannot be used for constructor. </h2> </div>
+<div class="options">
+<input type="radio" name="8" id="Quest22"> <label> A. public </label> </div>
+<div class="options">
+<input type="radio" name="8" id="Quest23"> <label> B. protected </label> </div>
+<div class="options">
+<input type="radio" name="8" id="Quest24"> <label> C. private </label> </div>
+<div class="options">
+<input type="radio" name="8" id="answer8"> <label> D. static </label> </div>
+<footer>
+<div class="qNumber"> 8 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> Q9. Exception created by try block is caught in which block. </h2> </div>
+<div class="options">
+<input type="radio" name="9" id="answer9"> <label> A. catch </label> </div>
+<div class="options">
+<input type="radio" name="9" id="Quest25"> <label> B. throw </label> </div>
+<div class="options">
+<input type="radio" name="9" id="Quest26"> <label> C. final </label> </div>
+<div class="options">
+<input type="radio" name="9" id="Quest27"> <label> D. None </label> </div>
+<footer>
+<div class="qNumber"> 9 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> Q10. Where does the system stores parameters and local variables whenever a method is invoked?" </h2> </div>
+<div class="options">
+<input type="radio" name="10" id="Quest28"> <label> A. Heap </label> </div>
+<div class="options">
+<input type="radio" name="10" id="answer10"> <label> B. Stack </label> </div>
+<div class="options">
+<input type="radio" name="10" id="Quest29"> <label> C. Array </label> </div>
+<div class="options">
+<input type="radio" name="10" id="Quest30"> <label> D. Tree </label> </div>
+<footer>
+<div class="qNumber"> 10 of 10 </div>
+<button id="nextButton" onclick="nextQuestion()">Submit</button>
+</div>
+</footer>
+
+<div class="box" style="display:none;">
+<div class="questions"> <h2> &nbsp; Thanks for participating in our Quiz! </h2> </div>
+<div class="options">
+<span id="output1"> </span>
+<span id="output2"> </span>
+<span id="output3"> </span>
+<button id="startButton" onclick="finalGrade()">Check Result</button>
+<button id="nextBtn" onclick="nextQuestion()" style="transform:translate(250%,500%);">Review</button> </div>
+</div>
+
+<div class="box" style="width:450px; height:450px; display:none;"> 
+<div class="questions"> <h2> Q1. Number of primitive data types in Java are? </h2> </div>
+<div class="options">
+<div id="q1"> A. 6 </div> </div>
+<div class="options">
+<div id="q2"> B. 7 </div> </div>
+<div class="options">
+<div id="ans1"> C. 8 </div> </div>
+<div class="options">
+<div id="q3"> D. 9 </div> </div>
+<footer>
+<div class="qNumberNew"> 1 of 10 </div>
+<button id="nextBtn" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="width:450px; height:450px; display:none;">
+<div class="questions"> <h2> Q2. What is the size of float and double in java? </h2> </div>
+<div class="options">
+<div id="ans2"> A. 32 and 64 </div> </div>
+<div class="options">
+<div id="q4"> B. 32 and 32 </div> </div>
+<div class="options">
+<div id="q5"> C. 64 and 64 </div> </div>
+<div class="options">
+<div id="q6"> D. 64 and 32 </div> </div>
+<footer>
+<div class="qNumberNew"> 2 of 10 </div>
+<button id="nextBtn" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="width:450px; height:450px; display:none;">
+<div class="questions"> <h2> Q3. Automatic type conversion is possible in which of the possible cases? </h2> </div>
+<div class="options">
+<div id="q7"> A. Byte to int </div> </div>
+<div class="options">
+<div id="ans3"> B. Int to long </div> </div>
+<div class="options">
+<div id="q8"> C. Long to int </div> </div>
+<div class="options">
+<div id="q9"> D. Short to int </div> </div>
+<footer>
+<div class="qNumberNew"> 3 of 10 </div>
+<button id="nextBtn" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="width:450px; height:450px; display:none;">
+<div class="questions"> <h2> &emsp; Q4. Select the valid statement. </h2> </div>
+<div class="options">
+<div id="ans4"> A. char[] ch = new char(5); </div> </div>
+<div class="options">
+<div id="q10"> B. char[] ch = new char[5]; </div> </div>
+<div class="options">
+<div id="q11"> C. char[] ch = new char(); </div> </div>
+<div class="options">
+<div id="q12"> D. char[] ch = new char[]; </div> </div>
+<footer>
+<div class="qNumberNew"> 4 of 10 </div>
+<button id="nextBtn" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="width:450px; height:450px; display:none;">
+<div class="questions"> <h2> Q5. When an array is passed to a method, what does the method receive? </h2> </div>
+<div class="options">
+<div id="ans5"> A. The reference of the array </div> </div>
+<div class="options">
+<div id="q13"> B. A copy of the array </div> </div>
+<div class="options">
+<div id="q14"> C. Length of the array </div> </div>
+<div class="options">
+<div id="q15"> D. Copy of the first element </div> </div>
+<footer>
+<div class="qNumberNew"> 5 of 10 </div>
+<button id="nextBtn" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="width:450px; height:450px; display:none;">
+<div class="questions"> <h2> Q6. Identify the keyword among the following that makes a variable belong to a class. </h2> </div>
+<div class="options">
+<div id="q16"> A. final </div> </div>
+<div class="options">
+<div id="ans6"> B. static </div> </div>
+<div class="options">
+<div id="q17"> C. volatile </div> </div>
+<div class="options">
+<div id="q18"> D. abstract </div> </div>
+<footer>
+<div class="qNumberNew"> 6 of 10 </div>
+<button id="nextBtn" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="width:450px; height:450px; display:none;">
+<div class="questions"> <h2> Q7. Identify the return type of a method that does not return any value. </h2> </div>
+<div class="options">
+<div id="q19"> A. int </div> </div>
+<div class="options">
+<div id="q20"> B. double </div> </div>
+<div class="options">
+<div id="ans7"> C. void </div> </div>
+<div class="options">
+<div id="q21"> D. None </div> </div>
+<footer>
+<div class="qNumberNew"> 7 of 10 </div>
+<button id="nextBtn" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="width:450px; height:450px; display:none;">
+<div class="questions"> <h2> Q8. Identify the modifier which cannot be used for constructor. </h2> </div>
+<div class="options">
+<div id="q22"> A. public </div> </div>
+<div class="options">
+<div id="q23"> B. protected </div> </div>
+<div class="options">
+<div id="q24"> C. private </div> </div>
+<div class="options">
+<div id="ans8"> D. static </div> </div>
+<footer>
+<div class="qNumberNew"> 8 of 10 </div>
+<button id="nextBtn" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="width:450px; height:450px; display:none;">
+<div class="questions"> <h2> Q9. Exception created by try block is caught in which block. </h2> </div>
+<div class="options">
+<div id="ans9"> A. catch </div> </div>
+<div class="options">
+<div id="q25"> B. throw </div> </div>
+<div class="options">
+<div id="q26"> C. final </div> </div>
+<div class="options">
+<div id="q27"> D. None </div> </div>
+<footer>
+<div class="qNumberNew"> 9 of 10 </div>
+<button id="nextBtn" onclick="nextQuestion()">Next</button>
+</div>
+</footer>
+
+<div class="box" style="width:450px; height:450px; display:none;">
+<div class="questions"> <h2> Q10. Where does the system stores parameters and local variables whenever a method is invoked?" </h2> </div>
+<div class="options">
+<div id="q28"> A. Heap </div> </div>
+<div class="options">
+<div id="ans10"> B. Stack </div> </div>
+<div class="options">
+<div id="q29"> C. Array </div> </div>
+<div class="options">
+<div id="q30"> D. Tree </div> </div>
+<footer>
+<div class="qNumberNew"> 10 of 10 </div>
+<button id="repeatBtn" onclick="nextQuestion()" style="transform:translate(250%,600%);">Finish</button>
+</div>
+</footer>
+
+<script>
+
+const correctAnswer1=document.getElementById('answer1');
+const A1=document.getElementById('ans1');
+const Quest1=document.getElementById('Quest1');
+const Quest2=document.getElementById('Quest2');
+const Quest3=document.getElementById('Quest3');
+const Q1=document.getElementById('q1');
+const Q2=document.getElementById('q2');
+const Q3=document.getElementById('q3');
+
+const correctAnswer2=document.getElementById('answer2');
+const A2=document.getElementById('ans2');
+const Quest4=document.getElementById('Quest4');
+const Quest5=document.getElementById('Quest5');
+const Quest6=document.getElementById('Quest6');
+const Q4=document.getElementById('q4');
+const Q5=document.getElementById('q5');
+const Q6=document.getElementById('q6');
+
+const correctAnswer3=document.getElementById('answer3');
+const A3=document.getElementById('ans3');
+const Quest7=document.getElementById('Quest7');
+const Quest8=document.getElementById('Quest8');
+const Quest9=document.getElementById('Quest9');
+const Q7=document.getElementById('q7');
+const Q8=document.getElementById('q8');
+const Q9=document.getElementById('q9');
+
+const correctAnswer4=document.getElementById('answer4');
+const A4=document.getElementById('ans4');
+const Quest10=document.getElementById('Quest10');
+const Quest11=document.getElementById('Quest11');
+const Quest12=document.getElementById('Quest12');
+const Q10=document.getElementById('q10');
+const Q11=document.getElementById('q11');
+const Q12=document.getElementById('q12');
+
+const correctAnswer5=document.getElementById('answer5');
+const A5=document.getElementById('ans5');
+const Quest13=document.getElementById('Quest13');
+const Quest14=document.getElementById('Quest14');
+const Quest15=document.getElementById('Quest15');
+const Q13=document.getElementById('q13');
+const Q14=document.getElementById('q14');
+const Q15=document.getElementById('q15');
+
+const correctAnswer6=document.getElementById('answer6');
+const A6=document.getElementById('ans6');
+const Quest16=document.getElementById('Quest16');
+const Quest17=document.getElementById('Quest17');
+const Quest18=document.getElementById('Quest18');
+const Q16=document.getElementById('q16');
+const Q17=document.getElementById('q17');
+const Q18=document.getElementById('q18');
+
+const correctAnswer7=document.getElementById('answer7');
+const A7=document.getElementById('ans7');
+const Quest19=document.getElementById('Quest19');
+const Quest20=document.getElementById('Quest20');
+const Quest21=document.getElementById('Quest21');
+const Q19=document.getElementById('q19');
+const Q20=document.getElementById('q20');
+const Q21=document.getElementById('q21');
+
+const correctAnswer8=document.getElementById('answer8');
+const A8=document.getElementById('ans8');
+const Quest22=document.getElementById('Quest22');
+const Quest23=document.getElementById('Quest23');
+const Quest24=document.getElementById('Quest24');
+const Q22=document.getElementById('q22');
+const Q23=document.getElementById('q23');
+const Q24=document.getElementById('q24');
+
+const correctAnswer9=document.getElementById('answer9');
+const A9=document.getElementById('ans9');
+const Quest25=document.getElementById('Quest25');
+const Quest26=document.getElementById('Quest26');
+const Quest27=document.getElementById('Quest27');
+const Q25=document.getElementById('q25');
+const Q26=document.getElementById('q26');
+const Q27=document.getElementById('q27');
+
+const correctAnswer10=document.getElementById('answer10');
+const A10=document.getElementById('ans10');
+const Quest28=document.getElementById('Quest28');
+const Quest29=document.getElementById('Quest29');
+const Quest30=document.getElementById('Quest30');
+const Q28=document.getElementById('q28');
+const Q29=document.getElementById('q29');
+const Q30=document.getElementById('q30');
+
+const nextBtn = document.getElementById('nextBtn');
+
+nextBtn.addEventListener('click', () => {
+if (correctAnswer1.checked) {
+A1.style.border = "10px solid green";
+A1.style.borderRadius = "10px";
+A1.style.backgroundColor = "green";
+}else{ if(Quest1.checked){
+Q1.style.border = "10px solid red";
+Q1.style.borderRadius = "10px";
+Q1.style.backgroundColor = "red";
+A1.style.border = "10px solid green";
+A1.style.borderRadius = "10px";
+A1.style.backgroundColor = "green";
+}else{ if(Quest2.checked){
+Q2.style.border = "10px solid red";
+Q2.style.borderRadius = "10px";
+Q2.style.backgroundColor = "red";
+A1.style.border = "10px solid green";
+A1.style.borderRadius = "10px";
+A1.style.backgroundColor = "green";
+}else{ if(Quest3.checked){
+Q3.style.border = "10px solid red";
+Q3.style.borderRadius = "10px";
+Q3.style.backgroundColor = "red";
+A1.style.border = "10px solid green";
+A1.style.borderRadius = "10px";
+A1.style.backgroundColor = "green";
+}else{
+A1.style.border = "10px solid green";
+A1.style.borderRadius = "10px";
+A1.style.backgroundColor = "green";
+Q1.style.border = "10px solid red";
+Q1.style.borderRadius = "10px";
+Q1.style.backgroundColor = "red";
+Q2.style.border = "10px solid red";
+Q2.style.borderRadius = "10px";
+Q2.style.backgroundColor = "red";
+Q3.style.border = "10px solid red";
+Q3.style.borderRadius = "10px";
+Q3.style.backgroundColor = "red";
+}}}}
+
+if (correctAnswer2.checked) {
+A2.style.border = "10px solid green";
+A2.style.borderRadius = "10px";
+A2.style.backgroundColor = "green";
+}else{ if(Quest4.checked){
+Q4.style.border = "10px solid red";
+Q4.style.borderRadius = "10px";
+Q4.style.backgroundColor = "red";
+A2.style.border = "10px solid green";
+A2.style.borderRadius = "10px";
+A2.style.backgroundColor = "green";
+}else{ if(Quest5.checked){
+Q5.style.border = "10px solid red";
+Q5.style.borderRadius = "10px";
+Q5.style.backgroundColor = "red";
+A2.style.border = "10px solid green";
+A2.style.borderRadius = "10px";
+A2.style.backgroundColor = "green";
+}else{ if(Quest6.checked){
+Q6.style.border = "10px solid red";
+Q6.style.borderRadius = "10px";
+Q6.style.backgroundColor = "red";
+A2.style.border = "10px solid green";
+A2.style.borderRadius = "10px";
+A2.style.backgroundColor = "green";
+}else{
+A2.style.border = "10px solid green";
+A2.style.borderRadius = "10px";
+A2.style.backgroundColor = "green";
+Q4.style.border = "10px solid red";
+Q4.style.borderRadius = "10px";
+Q4.style.backgroundColor = "red";
+Q5.style.border = "10px solid red";
+Q5.style.borderRadius = "10px";
+Q5.style.backgroundColor = "red";
+Q6.style.border = "10px solid red";
+Q6.style.borderRadius = "10px";
+Q6.style.backgroundColor = "red";
+}}}}
+
+if (correctAnswer3.checked) {
+A3.style.border = "10px solid green";
+A3.style.borderRadius = "10px";
+A3.style.backgroundColor = "green";
+}else{ if(Quest7.checked){
+Q7.style.border = "10px solid red";
+Q7.style.borderRadius = "10px";
+Q7.style.backgroundColor = "red";
+A3.style.border = "10px solid green";
+A3.style.borderRadius = "10px";
+A3.style.backgroundColor = "green";
+}else{ if(Quest8.checked){
+Q8.style.border = "10px solid red";
+Q8.style.borderRadius = "10px";
+Q8.style.backgroundColor = "red";
+A3.style.border = "10px solid green";
+A3.style.borderRadius = "10px";
+A3.style.backgroundColor = "green";
+}else{ if(Quest9.checked){
+Q9.style.border = "10px solid red";
+Q9.style.borderRadius = "10px";
+Q9.style.backgroundColor = "red";
+A3.style.border = "10px solid green";
+A3.style.borderRadius = "10px";
+A3.style.backgroundColor = "green";
+}else{
+A3.style.border = "10px solid green";
+A3.style.borderRadius = "10px";
+A3.style.backgroundColor = "green";
+Q7.style.border = "10px solid red";
+Q7.style.borderRadius = "10px";
+Q7.style.backgroundColor = "red";
+Q8.style.border = "10px solid red";
+Q8.style.borderRadius = "10px";
+Q8.style.backgroundColor = "red";
+Q9.style.border = "10px solid red";
+Q9.style.borderRadius = "10px";
+Q9.style.backgroundColor = "red";
+}}}}
+
+if (correctAnswer4.checked) {
+A4.style.border = "10px solid green";
+A4.style.borderRadius = "10px";
+A4.style.backgroundColor = "green";
+}else{ if(Quest10.checked){
+Q10.style.border = "10px solid red";
+Q10.style.borderRadius = "10px";
+Q10.style.backgroundColor = "red";
+A4.style.border = "10px solid green";
+A4.style.borderRadius = "10px";
+A4.style.backgroundColor = "green";
+}else{ if(Quest11.checked){
+Q11.style.border = "10px solid red";
+Q11.style.borderRadius = "10px";
+Q11.style.backgroundColor = "red";
+A4.style.border = "10px solid green";
+A4.style.borderRadius = "10px";
+A4.style.backgroundColor = "green";
+}else{ if(Quest12.checked){
+Q12.style.border = "10px solid red";
+Q12.style.borderRadius = "10px";
+Q12.style.backgroundColor = "red";
+A4.style.border = "10px solid green";
+A4.style.borderRadius = "10px";
+A4.style.backgroundColor = "green";
+}else{
+A4.style.border = "10px solid green";
+A4.style.borderRadius = "10px";
+A4.style.backgroundColor = "green";
+Q10.style.border = "10px solid red";
+Q10.style.borderRadius = "10px";
+Q10.style.backgroundColor = "red";
+Q11.style.border = "10px solid red";
+Q11.style.borderRadius = "10px";
+Q11.style.backgroundColor = "red";
+Q12.style.border = "10px solid red";
+Q12.style.borderRadius = "10px";
+Q12.style.backgroundColor = "red";
+}}}}
+
+if (correctAnswer5.checked) {
+A5.style.border = "10px solid green";
+A5.style.borderRadius = "10px";
+A5.style.backgroundColor = "green";
+}else{ if(Quest13.checked){
+Q13.style.border = "10px solid red";
+Q13.style.borderRadius = "10px";
+Q13.style.backgroundColor = "red";
+A5.style.border = "10px solid green";
+A5.style.borderRadius = "10px";
+A5.style.backgroundColor = "green";
+}else{ if(Quest14.checked){
+Q14.style.border = "10px solid red";
+Q14.style.borderRadius = "10px";
+Q14.style.backgroundColor = "red";
+A5.style.border = "10px solid green";
+A5.style.borderRadius = "10px";
+A5.style.backgroundColor = "green";
+}else{ if(Quest15.checked){
+Q15.style.border = "10px solid red";
+Q15.style.borderRadius = "10px";
+Q15.style.backgroundColor = "red";
+A5.style.border = "10px solid green";
+A5.style.borderRadius = "10px";
+A5.style.backgroundColor = "green";
+}else{
+A5.style.border = "10px solid green";
+A5.style.borderRadius = "10px";
+A5.style.backgroundColor = "green";
+Q13.style.border = "10px solid red";
+Q13.style.borderRadius = "10px";
+Q13.style.backgroundColor = "red";
+Q14.style.border = "10px solid red";
+Q14.style.borderRadius = "10px";
+Q14.style.backgroundColor = "red";
+Q15.style.border = "10px solid red";
+Q15.style.borderRadius = "10px";
+Q15.style.backgroundColor = "red";
+}}}}
+
+if (correctAnswer6.checked) {
+A6.style.border = "10px solid green";
+A6.style.borderRadius = "10px";
+A6.style.backgroundColor = "green";
+}else{ if(Quest16.checked){
+Q16.style.border = "10px solid red";
+Q16.style.borderRadius = "10px";
+Q16.style.backgroundColor = "red";
+A6.style.border = "10px solid green";
+A6.style.borderRadius = "10px";
+A6.style.backgroundColor = "green";
+}else{ if(Quest17.checked){
+Q17.style.border = "10px solid red";
+Q17.style.borderRadius = "10px";
+Q17.style.backgroundColor = "red";
+A6.style.border = "10px solid green";
+A6.style.borderRadius = "10px";
+A6.style.backgroundColor = "green";
+}else{ if(Quest18.checked){
+Q18.style.border = "10px solid red";
+Q18.style.borderRadius = "10px";
+Q18.style.backgroundColor = "red";
+A6.style.border = "10px solid green";
+A6.style.borderRadius = "10px";
+A6.style.backgroundColor = "green";
+}else{
+A6.style.border = "10px solid green";
+A6.style.borderRadius = "10px";
+A6.style.backgroundColor = "green";
+Q16.style.border = "10px solid red";
+Q16.style.borderRadius = "10px";
+Q16.style.backgroundColor = "red";
+Q17.style.border = "10px solid red";
+Q17.style.borderRadius = "10px";
+Q17.style.backgroundColor = "red";
+Q18.style.border = "10px solid red";
+Q18.style.borderRadius = "10px";
+Q18.style.backgroundColor = "red";
+}}}}
+
+if (correctAnswer7.checked) {
+A7.style.border = "10px solid green";
+A7.style.borderRadius = "10px";
+A7.style.backgroundColor = "green";
+}else{ if(Quest19.checked){
+Q19.style.border = "10px solid red";
+Q19.style.borderRadius = "10px";
+Q19.style.backgroundColor = "red";
+A7.style.border = "10px solid green";
+A7.style.borderRadius = "10px";
+A7.style.backgroundColor = "green";
+}else{ if(Quest20.checked){
+Q20.style.border = "10px solid red";
+Q20.style.borderRadius = "10px";
+Q20.style.backgroundColor = "red";
+A7.style.border = "10px solid green";
+A7.style.borderRadius = "10px";
+A7.style.backgroundColor = "green";
+}else{ if(Quest21.checked){
+Q21.style.border = "10px solid red";
+Q21.style.borderRadius = "10px";
+Q21.style.backgroundColor = "red";
+A7.style.border = "10px solid green";
+A7.style.borderRadius = "10px";
+A7.style.backgroundColor = "green";
+}else{
+A7.style.border = "10px solid green";
+A7.style.borderRadius = "10px";
+A7.style.backgroundColor = "green";
+Q19.style.border = "10px solid red";
+Q19.style.borderRadius = "10px";
+Q19.style.backgroundColor = "red";
+Q20.style.border = "10px solid red";
+Q20.style.borderRadius = "10px";
+Q20.style.backgroundColor = "red";
+Q21.style.border = "10px solid red";
+Q21.style.borderRadius = "10px";
+Q21.style.backgroundColor = "red";
+}}}}
+
+if (correctAnswer8.checked) {
+A8.style.border = "10px solid green";
+A8.style.borderRadius = "10px";
+A8.style.backgroundColor = "green";
+}else{ if(Quest22.checked){
+Q22.style.border = "10px solid red";
+Q22.style.borderRadius = "10px";
+Q22.style.backgroundColor = "red";
+A8.style.border = "10px solid green";
+A8.style.borderRadius = "10px";
+A8.style.backgroundColor = "green";
+}else{ if(Quest23.checked){
+Q23.style.border = "10px solid red";
+Q23.style.borderRadius = "10px";
+Q23.style.backgroundColor = "red";
+A8.style.border = "10px solid green";
+A8.style.borderRadius = "10px";
+A8.style.backgroundColor = "green";
+}else{ if(Quest24.checked){
+Q24.style.border = "10px solid red";
+Q24.style.borderRadius = "10px";
+Q24.style.backgroundColor = "red";
+A8.style.border = "10px solid green";
+A8.style.borderRadius = "10px";
+A8.style.backgroundColor = "green";
+}else{
+A8.style.border = "10px solid green";
+A8.style.borderRadius = "10px";
+A8.style.backgroundColor = "green";
+Q22.style.border = "10px solid red";
+Q22.style.borderRadius = "10px";
+Q22.style.backgroundColor = "red";
+Q23.style.border = "10px solid red";
+Q23.style.borderRadius = "10px";
+Q23.style.backgroundColor = "red";
+Q24.style.border = "10px solid red";
+Q24.style.borderRadius = "10px";
+Q24.style.backgroundColor = "red";
+}}}}
+
+if (correctAnswer9.checked) {
+A9.style.border = "10px solid green";
+A9.style.borderRadius = "10px";
+A9.style.backgroundColor = "green";
+}else{ if(Quest25.checked){
+Q25.style.border = "10px solid red";
+Q25.style.borderRadius = "10px";
+Q25.style.backgroundColor = "red";
+A9.style.border = "10px solid green";
+A9.style.borderRadius = "10px";
+A9.style.backgroundColor = "green";
+}else{ if(Quest26.checked){
+Q26.style.border = "10px solid red";
+Q26.style.borderRadius = "10px";
+Q26.style.backgroundColor = "red";
+A9.style.border = "10px solid green";
+A9.style.borderRadius = "10px";
+A9.style.backgroundColor = "green";
+}else{ if(Quest27.checked){
+Q27.style.border = "10px solid red";
+Q27.style.borderRadius = "10px";
+Q27.style.backgroundColor = "red";
+A9.style.border = "10px solid green";
+A9.style.borderRadius = "10px";
+A9.style.backgroundColor = "green";
+}else{
+A9.style.border = "10px solid green";
+A9.style.borderRadius = "10px";
+A9.style.backgroundColor = "green";
+Q25.style.border = "10px solid red";
+Q25.style.borderRadius = "10px";
+Q25.style.backgroundColor = "red";
+Q26.style.border = "10px solid red";
+Q26.style.borderRadius = "10px";
+Q26.style.backgroundColor = "red";
+Q27.style.border = "10px solid red";
+Q27.style.borderRadius = "10px";
+Q27.style.backgroundColor = "red";
+}}}}
+
+if (correctAnswer10.checked) {
+A10.style.border = "10px solid green";
+A10.style.borderRadius = "10px";
+A10.style.backgroundColor = "green";
+}else{ if(Quest28.checked){
+Q28.style.border = "10px solid red";
+Q28.style.borderRadius = "10px";
+Q28.style.backgroundColor = "red";
+A10.style.border = "10px solid green";
+A10.style.borderRadius = "10px";
+A10.style.backgroundColor = "green";
+}else{ if(Quest29.checked){
+Q29.style.border = "10px solid red";
+Q29.style.borderRadius = "10px";
+Q29.style.backgroundColor = "red";
+A10.style.border = "10px solid green";
+A10.style.borderRadius = "10px";
+A10.style.backgroundColor = "green";
+}else{ if(Quest30.checked){
+Q30.style.border = "10px solid red";
+Q30.style.borderRadius = "10px";
+Q30.style.backgroundColor = "red";
+A10.style.border = "10px solid green";
+A10.style.borderRadius = "10px";
+A10.style.backgroundColor = "green";
+}else{
+A10.style.border = "10px solid green";
+A10.style.borderRadius = "10px";
+A10.style.backgroundColor = "green";
+Q28.style.border = "10px solid red";
+Q28.style.borderRadius = "10px";
+Q28.style.backgroundColor = "red";
+Q29.style.border = "10px solid red";
+Q29.style.borderRadius = "10px";
+Q29.style.backgroundColor = "red";
+Q30.style.border = "10px solid red";
+Q30.style.borderRadius = "10px";
+Q30.style.backgroundColor = "red";
+}}}}
+
+});
+
+const fName=document.getElementById('userFirst');
+const lName=document.getElementById('userLast');
+const idNb=document.getElementById('ID');
+const out1=document.getElementById('output1');
+const out2=document.getElementById('output2');
+const out3=document.getElementById('output3');
+const button=document.getElementById('btn');
+
+function showInfo(){
+out1.innerHTML=fName.value;
+out2.innerHTML=lName.value;
+out3.innerHTML=idNb.value;
+}
+
+btn.addEventListener('click',showInfo);
+
+function myFunc()
+{
+var First=document.forms["form1"]["userFirst"].value;
+var Last=document.forms["form1"]["userLast"].value;
+var Numb=document.forms["form1"]["ID"].value;
+if(First=="" || Last=="" || Numb=="")
+{
+alert("Please enter your information.");
+}
+else{ if(Numb.length!=9)
+{
+alert("USEK ID must be 9 digits.");
+}
+else
+{
+nextQuestion();
+showInfo();
+}}}
+
+var boxes = document.getElementsByClassName('box');
+var currentIndex = 0;
+
+boxes[currentIndex].style.display = 'block';
+
+function nextQuestion() {
+boxes[currentIndex].style.display = 'none';
+currentIndex++;
+boxes[currentIndex].style.display = 'block';
+}
+
+const repeatBtn=document.getElementById('repeatBtn');
+repeatBtn.addEventListener('click', function() {
+currentIndex = 11;
+nextQuestion();
+});
+
+function finalGrade(){
+var result=0;
+if(correctAnswer1.checked){
+result++;
+}
+if(correctAnswer2.checked){
+result++;
+}
+if(correctAnswer3.checked){
+result++;
+}
+if(correctAnswer4.checked){
+result++;
+}
+if(correctAnswer5.checked){
+result++;
+}
+if(correctAnswer6.checked){
+result++;
+}
+if(correctAnswer7.checked){
+result++;
+}
+if(correctAnswer8.checked){
+result++;
+}
+if(correctAnswer9.checked){
+result++;
+}
+if(correctAnswer10.checked){
+result++;
+}
+if(result==10){
+alert("Your final result is: "+result+ "/10" + "  Excellent Work!");
+}else{if(result==9 || result==8){
+alert("Your final result is: "+result+ "/10" + "  Good Job!");
+}else{if(result<=4){
+alert("Your final result is: "+result+ "/10" + "  Terrible Work :(" );
+}else{
+alert("Your final result is: "+result+ "/10");
+}}}}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+body{
+font-family:arial;
+font-size:15px;
+background-image: url("QuizBackground.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+}
+
+.box{
+position:absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+width:400px;
+height:400px;
+background:white;
+border-radius:10px;
+padding-left:10px;
+padding-right:10px;
+}
+
+.image{
+display: block;  
+margin-left:auto;  
+margin-right:auto; 
+width:220px;  
+height:220px;
+}
+
+.box h1{
+text-align:center;
+padding-bottom:10px;
+border-bottom: 1px solid grey;
+}
+
+.box form{
+padding-top:10px;
+padding-left:50px;
+}
+
+.field{
+padding-bottom:20px;
+}
+
+.field input{
+width:80%;
+}
+
+.questions h2{
+background-color:#151b8d;
+color:white;
+display:flex;
+justify-content:space-between;
+text-align:center;
+margin-left:-11px;
+margin-right:-11px;
+margin-top:-4px;
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+padding-top:15px;
+padding-bottom:25px;
+padding-right:-10px;
+padding-left:5px;
+}
+
+.options {
+text-align:center;
+font-size:20px;
+padding-top:10px;
+margin-bottom:20px;
+}
+
+#startButton{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+background-color:#151b8d;
+width:200px;
+height:100px;
+border:none;
+color:white;
+padding:20px 30px 20px 30px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:25px;
+border-radius:10px;
+transition-duration:0.5s;
+cursor:pointer;
+}
+
+#nextButton{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(250%,500%);
+background-color:#151b8d;
+width:50px;
+height:30px;
+border:none;
+color:white;
+padding:2px 4px 4px 2px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:15px;
+border-radius:4px;
+transition-duration:0.5s;
+cursor:pointer;
+}
+
+#btn{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-55%,750%);
+background-color:#151b8d;
+width:50px;
+height:30px;
+border:none;
+color:white;
+padding:2px 4px 4px 2px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:15px;
+border-radius:4px;
+transition-duration:0.5s;
+cursor:pointer;
+}
+
+.qNumber{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-300%,875%);
+padding-left:10px;
+}
+
+.qNumberNew{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-300%,1050%);
+padding-left:10px;
+}
+
+#nextBtn{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(250%,600%);
+background-color:#151b8d;
+width:50px;
+height:30px;
+border:none;
+color:white;
+padding:2px 4px 4px 2px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:15px;
+border-radius:4px;
+transition-duration:0.5s;
+cursor:pointer;
+}
+
+#repeatBtn{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(250%,500%);
+background-color:#151b8d;
+width:50px;
+height:30px;
+border:none;
+color:white;
+padding:2px 4px 4px 2px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:15px;
+border-radius:4px;
+transition-duration:0.5s;
+cursor:pointer;
+}
+
