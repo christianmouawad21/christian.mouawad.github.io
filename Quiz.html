@@ -887,6 +887,10 @@ if(First=="" || Last=="" || Numb=="")
 {
 alert("Please enter your information.");
 }
+else{ if(isNaN(Numb))
+{
+alert("USEK ID must be only numbers.");
+}
 else{ if(Numb.length!=9)
 {
 alert("USEK ID must be 9 digits.");
@@ -895,7 +899,7 @@ else
 {
 nextQuestion();
 showInfo();
-}}}
+}}}}
 
 var boxes = document.getElementsByClassName('box');
 var currentIndex = 0;

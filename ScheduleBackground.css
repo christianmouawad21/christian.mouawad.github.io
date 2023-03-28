@@ -1,0 +1,22 @@
+body{
+background-image: url("ScheduleBackground.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+overflow: hidden;
+}
+
+table{
+margin-left:265px;
+font-size:20px;
+}
+
+h1{
+margin-left:265px;
+text-decoration: underline;
+}
+
+tr{
+background-color: lightblue;
+}
