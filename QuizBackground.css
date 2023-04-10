@@ -76,7 +76,7 @@ margin-bottom:20px;
 position:absolute;
 top:50%;
 left:50%;
-transform:translate(-50%, -50%);
+transform:translate(-50%,-50%);
 background-color:#151b8d;
 width:200px;
 height:100px;
@@ -112,11 +112,31 @@ transition-duration:0.5s;
 cursor:pointer;
 }
 
+#prevButton{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-350%,500%);
+background-color:#151b8d;
+width:50px;
+height:30px;
+border:none;
+color:white;
+padding:2px 4px 4px 2px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:15px;
+border-radius:4px;
+transition-duration:0.5s;
+cursor:pointer;
+}
+
 #btn{
 position:absolute;
 top:50%;
 left:50%;
-transform:translate(-55%,750%);
+transform:translate(-55%,925%);
 background-color:#151b8d;
 width:50px;
 height:30px;
@@ -136,7 +156,7 @@ cursor:pointer;
 position:absolute;
 top:50%;
 left:50%;
-transform:translate(-300%,875%);
+transform:translate(-50%,875%);
 padding-left:10px;
 }
 
@@ -144,7 +164,7 @@ padding-left:10px;
 position:absolute;
 top:50%;
 left:50%;
-transform:translate(-300%,1050%);
+transform:translate(-55%,1050%);
 padding-left:10px;
 }
 
@@ -152,7 +172,7 @@ padding-left:10px;
 position:absolute;
 top:50%;
 left:50%;
-transform:translate(250%,600%);
+transform:translate(250%,610%);
 background-color:#151b8d;
 width:50px;
 height:30px;
@@ -167,6 +187,27 @@ border-radius:4px;
 transition-duration:0.5s;
 cursor:pointer;
 }
+
+#prevBtn{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-350%,610%);
+background-color:#151b8d;
+width:50px;
+height:30px;
+border:none;
+color:white;
+padding:2px 4px 4px 2px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:15px;
+border-radius:4px;
+transition-duration:0.5s;
+cursor:pointer;
+}
+
 
 #repeatBtn{
 position:absolute;
@@ -187,4 +228,3 @@ border-radius:4px;
 transition-duration:0.5s;
 cursor:pointer;
 }
-

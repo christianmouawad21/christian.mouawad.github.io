@@ -14,7 +14,7 @@
 
 <body>
 
-<div class="box" style="width:350px; height:550px; border-radius:5px; padding-left:0px; padding-right:0px;">
+<div class="box" style="width:350px; height:650px; border-radius:5px; padding-left:0px; padding-right:0px;">
 <img class="image" src="usek2.png" alt="Logo">
 <h1> Login </h1>
 <form name="form1" method="post">
@@ -24,6 +24,12 @@
 <div class="field">
 <label> Last Name </label> 
 <input type="text" id="userLast" required> </div>
+<div class="field">
+<label> Birth Date </label> 
+<input type="date" id="userBirthDate" required> </div>
+<div class="field">
+<label> Your Email </label> 
+<input type="email" id="userEmail" required> </div>
 <div class="field">
 <label> USEK ID </label> 
 <input type="text" id="ID" required> </div>
@@ -62,6 +68,7 @@
 <div class="options">
 <input type="radio" name="2" id="Quest6"> <label> D. 64 and 32  </label> </div>
 <footer>
+<button id="prevButton" onclick="prevQuestion()">Prev</button>
 <div class="qNumber"> 2 of 10 </div>
 <button id="nextButton" onclick="nextQuestion()">Next</button>
 </div>
@@ -78,6 +85,7 @@
 <div class="options">
 <input type="radio" name="3" id="Quest9"> <label> D. Short to int </label> </div>
 <footer>
+<button id="prevButton" onclick="prevQuestion()">Prev</button>
 <div class="qNumber"> 3 of 10 </div>
 <button id="nextButton" onclick="nextQuestion()">Next</button>
 </div>
@@ -94,6 +102,7 @@
 <div class="options">
 <input type="radio" name="4 "id="Quest12"> <label> D. char[] ch = new char[]; </label> </div>
 <footer>
+<button id="prevButton" onclick="prevQuestion()">Prev</button>
 <div class="qNumber"> 4 of 10 </div>
 <button id="nextButton" onclick="nextQuestion()">Next</button>
 </div>
@@ -110,6 +119,7 @@
 <div class="options">
 <input type="radio" name="5" id="Quest15"> <label> D. Copy of the first element </label> </div>
 <footer>
+<button id="prevButton" onclick="prevQuestion()">Prev</button>
 <div class="qNumber"> 5 of 10 </div>
 <button id="nextButton" onclick="nextQuestion()">Next</button>
 </div>
@@ -126,6 +136,7 @@
 <div class="options">
 <input type="radio" name="6" id="Quest18"> <label> D. abstract </label> </div>
 <footer>
+<button id="prevButton" onclick="prevQuestion()">Prev</button>
 <div class="qNumber"> 6 of 10 </div>
 <button id="nextButton" onclick="nextQuestion()">Next</button>
 </div>
@@ -142,6 +153,7 @@
 <div class="options">
 <input type="radio" name="7" id="Quest21"> <label> D. None </label> </div>
 <footer>
+<button id="prevButton" onclick="prevQuestion()">Prev</button>
 <div class="qNumber"> 7 of 10 </div>
 <button id="nextButton" onclick="nextQuestion()">Next</button>
 </div>
@@ -158,6 +170,7 @@
 <div class="options">
 <input type="radio" name="8" id="answer8"> <label> D. static </label> </div>
 <footer>
+<button id="prevButton" onclick="prevQuestion()">Prev</button>
 <div class="qNumber"> 8 of 10 </div>
 <button id="nextButton" onclick="nextQuestion()">Next</button>
 </div>
@@ -174,6 +187,7 @@
 <div class="options">
 <input type="radio" name="9" id="Quest27"> <label> D. None </label> </div>
 <footer>
+<button id="prevButton" onclick="prevQuestion()">Prev</button>
 <div class="qNumber"> 9 of 10 </div>
 <button id="nextButton" onclick="nextQuestion()">Next</button>
 </div>
@@ -190,6 +204,7 @@
 <div class="options">
 <input type="radio" name="10" id="Quest30"> <label> D. Tree </label> </div>
 <footer>
+<button id="prevButton" onclick="prevQuestion()">Prev</button>
 <div class="qNumber"> 10 of 10 </div>
 <button id="nextButton" onclick="nextQuestion()">Submit</button>
 </div>
@@ -198,10 +213,12 @@
 <div class="box" style="display:none;">
 <div class="questions"> <h2> &nbsp; Thanks for participating in our Quiz! </h2> </div>
 <div class="options">
-<span id="output1"> </span>
-<span id="output2"> </span>
-<span id="output3"> </span>
-<button id="startButton" onclick="finalGrade()">Check Result</button>
+<div> Full Name: <span id="output1"> </span>
+<span id="output2"> </span> </div>
+<div> Birth Date: <span id="output3"> </span> </div>
+<div> Email: <span id="output4"> </span> </div>
+<div> USEK ID: <span id="output5"> </span> </div>
+<button id="startButton" onclick="finalGrade()"style="transform:translate(-50%,0%);">Check Result</button>
 <button id="nextBtn" onclick="nextQuestion()" style="transform:translate(250%,500%);">Review</button> </div>
 </div>
 
@@ -232,6 +249,7 @@
 <div class="options">
 <div id="q6"> D. 64 and 32 </div> </div>
 <footer>
+<button id="prevBtn" onclick="prevQuestion()">Prev</button>
 <div class="qNumberNew"> 2 of 10 </div>
 <button id="nextBtn" onclick="nextQuestion()">Next</button>
 </div>
@@ -248,6 +266,7 @@
 <div class="options">
 <div id="q9"> D. Short to int </div> </div>
 <footer>
+<button id="prevBtn" onclick="prevQuestion()">Prev</button>
 <div class="qNumberNew"> 3 of 10 </div>
 <button id="nextBtn" onclick="nextQuestion()">Next</button>
 </div>
@@ -264,6 +283,7 @@
 <div class="options">
 <div id="q12"> D. char[] ch = new char[]; </div> </div>
 <footer>
+<button id="prevBtn" onclick="prevQuestion()">Prev</button>
 <div class="qNumberNew"> 4 of 10 </div>
 <button id="nextBtn" onclick="nextQuestion()">Next</button>
 </div>
@@ -280,6 +300,7 @@
 <div class="options">
 <div id="q15"> D. Copy of the first element </div> </div>
 <footer>
+<button id="prevBtn" onclick="prevQuestion()">Prev</button>
 <div class="qNumberNew"> 5 of 10 </div>
 <button id="nextBtn" onclick="nextQuestion()">Next</button>
 </div>
@@ -296,6 +317,7 @@
 <div class="options">
 <div id="q18"> D. abstract </div> </div>
 <footer>
+<button id="prevBtn" onclick="prevQuestion()">Prev</button>
 <div class="qNumberNew"> 6 of 10 </div>
 <button id="nextBtn" onclick="nextQuestion()">Next</button>
 </div>
@@ -312,6 +334,7 @@
 <div class="options">
 <div id="q21"> D. None </div> </div>
 <footer>
+<button id="prevBtn" onclick="prevQuestion()">Prev</button>
 <div class="qNumberNew"> 7 of 10 </div>
 <button id="nextBtn" onclick="nextQuestion()">Next</button>
 </div>
@@ -328,6 +351,7 @@
 <div class="options">
 <div id="ans8"> D. static </div> </div>
 <footer>
+<button id="prevBtn" onclick="prevQuestion()">Prev</button>
 <div class="qNumberNew"> 8 of 10 </div>
 <button id="nextBtn" onclick="nextQuestion()">Next</button>
 </div>
@@ -344,6 +368,7 @@
 <div class="options">
 <div id="q27"> D. None </div> </div>
 <footer>
+<button id="prevBtn" onclick="prevQuestion()">Prev</button>
 <div class="qNumberNew"> 9 of 10 </div>
 <button id="nextBtn" onclick="nextQuestion()">Next</button>
 </div>
@@ -360,8 +385,9 @@
 <div class="options">
 <div id="q30"> D. Tree </div> </div>
 <footer>
+<button id="prevBtn" onclick="prevQuestion()">Prev</button>
 <div class="qNumberNew"> 10 of 10 </div>
-<button id="repeatBtn" onclick="nextQuestion()" style="transform:translate(250%,600%);">Finish</button>
+<button id="repeatBtn" onclick="nextQuestion()" style="transform:translate(250%,610%);">Finish</button>
 </div>
 </footer>
 
@@ -864,42 +890,54 @@ Q30.style.backgroundColor = "red";
 
 const fName=document.getElementById('userFirst');
 const lName=document.getElementById('userLast');
+const Email=document.getElementById('userEmail');
+const bDate=document.getElementById('userBirthDate');
 const idNb=document.getElementById('ID');
 const out1=document.getElementById('output1');
 const out2=document.getElementById('output2');
 const out3=document.getElementById('output3');
+const out4=document.getElementById('output4');
+const out5=document.getElementById('output5');
 const button=document.getElementById('btn');
 
 function showInfo(){
 out1.innerHTML=fName.value;
 out2.innerHTML=lName.value;
-out3.innerHTML=idNb.value;
+out3.innerHTML=bDate.value;
+out4.innerHTML=Email.value;
+out5.innerHTML=idNb.value;
 }
 
 btn.addEventListener('click',showInfo);
 
-function myFunc()
-{
-var First=document.forms["form1"]["userFirst"].value;
-var Last=document.forms["form1"]["userLast"].value;
-var Numb=document.forms["form1"]["ID"].value;
-if(First=="" || Last=="" || Numb=="")
+function myFunc() {
+var First = document.forms["form1"]["userFirst"].value;
+var Last = document.forms["form1"]["userLast"].value;
+var Numb = document.forms["form1"]["ID"].value;
+var Email = document.forms["form1"]["userEmail"].value;
+var Date = document.forms["form1"]["userBirthDate"].value;
+
+if (First == "" || Last == "" || Numb == "" || Email == "" || Date=="") 
 {
 alert("Please enter your information.");
+} else {
+    if (isNaN(Numb)) {
+      alert("USEK ID must be only numbers.");
+    } else if (Numb.length != 9) {
+      alert("USEK ID must be 9 digits.");
+    } else if (!isValidEmail(Email)) {
+      alert("Please enter a valid email address.");
+    } else {
+      nextQuestion();
+      showInfo();
+    }
+  }
 }
-else{ if(isNaN(Numb))
-{
-alert("USEK ID must be only numbers.");
+
+function isValidEmail(email) {
+var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+return emailRegex.test(email);
 }
-else{ if(Numb.length!=9)
-{
-alert("USEK ID must be 9 digits.");
-}
-else
-{
-nextQuestion();
-showInfo();
-}}}}
 
 var boxes = document.getElementsByClassName('box');
 var currentIndex = 0;
@@ -911,6 +949,22 @@ boxes[currentIndex].style.display = 'none';
 currentIndex++;
 boxes[currentIndex].style.display = 'block';
 }
+
+function prevQuestion() {
+if(currentIndex==2){
+boxes[currentIndex+1].style.display = 'none';
+boxes[currentIndex].style.display = 'block';
+}else{
+boxes[currentIndex].style.display = 'none';
+currentIndex--;
+boxes[currentIndex].style.display = 'block';
+}
+}
+
+const prevBtn = document.getElementById('prevButton');
+prevBtn.addEventListener('click', function() {
+  prevQuestion();
+});
 
 const repeatBtn=document.getElementById('repeatBtn');
 repeatBtn.addEventListener('click', function() {
